@@ -1,0 +1,53 @@
+<!--ca commence ici-->
+
+<!DOCTYPE html>
+<html lang ="fr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    
+    .lexend-font{
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 405;
+        font-style: normal;
+        }
+</style>
+<head>
+    <title>Calcugaz</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChCS4YdGK4m6n2LvjWmmIMCbAK1S9O238&libraries=places&callback=initMap" async defer></script>
+
+    <h1 class="lexend-font">Calculons le prix de votre plein...</h1>
+        <p class="lexend-font" id = "dropQuestion">D'abord, sélectionez le type de vehicule...</p>
+        <select id="typeChoice" class="dropdown" >
+             <option value="" selected disabled>Type</option>
+            <option value="berline">Berline</option>
+            <option value="hatchback">Hatchback</option>
+            <option value="VUS">V.U.S.</option>
+            <option value="minivan">Minivan</option>
+        </select>
+        <p class="lexend-font" id="kiloQuestion">Maintenant, entrez votre origine et votre destination...</p>
+        <div class = "text-box">
+            <input type = "text" id = "origine" placeholder = "Origine" class = "text">
+        </div>
+        <div class="input">
+            <input type = "text" id = "destination" placeholder = "Destination" class = "text">
+        </div>
+        <div id="places-list"></div>
+        </body>
+        <div class = "bouton">
+            <button id="confirm" class = "btn1">Calculer</button>
+            <button id = "clear" class = "btn1">Effacer</button>
+        </div>
+        <p class="lexend-font" id = "rep"></p>
+        <script src ="map.js"></script>
+        <noscript>
+        ca ne marche pas
+        </noscript>
+    
+</body>
+</html>
+  
